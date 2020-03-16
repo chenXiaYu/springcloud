@@ -1,0 +1,2 @@
+encrypt:                #必须配置在此才能生效
+  key: key

@@ -1,0 +1,21 @@
+server:
+  port: 7777
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+
+turbine:
+  app-config: FEIGN-CONSUMER2,PROVIDER,FEIGN-CONSUMER
+  aggregator:
+      cluster-config: default
+  cluster-name-expression: "'default'"
+  combine-host-port: true
+spring:
+  application:
+    name: turbine
